@@ -53,7 +53,7 @@ class CorpItem(object):
         if link and (not link.startswith('http://')):
             logger.warning('为%s加上了`http://\'', link.encode('utf-8'))
             link = 'http://' + link
-        return link
+        return link.encode('utf-8')
 
 
     @staticmethod
@@ -86,7 +86,7 @@ class CorpItem(object):
         if self.website:
             if self.website_title:
                 return True
-            self.logger.warning('%s denied', self.corp_name)
+            self.logger.warning('%s 无效', self.corp_name)
 
         return False
 
@@ -127,9 +127,8 @@ class CorpItem(object):
                             return
 
                         request = urllib2.Request(self.website, headers=COMMON_HEADERS)
-                        response = urllib2.urlopen(request,timeout=30)
                         self.logger.info('正在连接 %s' % self.website)
-
+                        response = urllib2.urlopen(request,timeout=30)
 
                         if response:
                             raw_file = response.read()
@@ -137,15 +136,9 @@ class CorpItem(object):
                                                  'html.parser',
                                                  from_encoding=chardet.detect(raw_file)['encoding'].lower())
                             title = soup.head.title.get_text().encode('utf-8')
-                            #self._website_title = title
-
-                            #if (not self._website_title) or ('阿里巴巴' in self._website_title) or ('全球最丰富的供应信息 尽在阿里巴巴' in self._website_title) :
-                            #    self._website_title=""
-                            #    return
-
+                            self._website_title = title
                             if (not title) or ('阿里巴巴' in title):
-                                self._website_title = title
-                            else:
+                                self._website_title = ''
                                 return
                         else:
                             return
