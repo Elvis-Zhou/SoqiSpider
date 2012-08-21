@@ -4,7 +4,8 @@ from pyExcelerator import Workbook
 
 class ExcelWriter(object):
 
-    XLS_HEADERS = [u'公司ID编码', u'公司名', u'公司简介', u'公司主要产品', u'公司网站', u'公司网站标题']
+    #XLS_HEADERS = [u'公司ID编码', u'公司名', u'公司简介', u'公司主要产品', u'公司网站', u'公司网站标题']
+    XLS_HEADERS = [u'公司ID', u'公司名', u'公司网址', u'网站标题',u'网站描述', u'网站搜索关键词或产品']
     COLS = len(XLS_HEADERS)
 
     def __init__(self, logger, output_name='text.xls'):

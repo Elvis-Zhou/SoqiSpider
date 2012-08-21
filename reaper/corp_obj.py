@@ -167,15 +167,28 @@ class CorpItem(object):
     def get_info_as_tuple(self):
         """将对象所存内容按tuple打包后返回，方便插入excel或mysql"""
         # self.thread.join() # 目前是惰性版本的求值方式，直到需要取值了才强行阻塞，但这样使得其他访问数据的方式变得不安全
+        #XLS_HEADERS = [u'公司ID', u'公司名', u'公司网址', u'网站标题',u'网站描述', u'网站搜索关键词或产品']
         if self.website_title:
+            ss=re.sub(r'\t','|',self.product,re.M)
+            ss=ss.replace("？","|")
+            ss=ss.replace("?","|")
+            ss=ss.replace("、","|")
+            ss=ss.replace("，","|")
+            ss=ss.replace("。","|")
+            ss=ss.replace(",","|")
+            ss=ss.replace(".","|")
+            ss=ss.replace("||","|")
+            if ss.endswith("|"):
+                ss=ss[:-1]
+            print ss
             return (
-                self.id,
-                self.corp_name,
-                self.introduction,
-                self.product,
-                self.website,
-                self.website_title
-            )
+                    self.id,
+                    self.corp_name,
+                    self.website,
+                    self.website_title,
+                    self.introduction,
+                    ss
+                )
 
 
     def dump(self):
