@@ -132,9 +132,10 @@ class CorpItem(object):
 
                         if response:
                             raw_file = response.read()
-                            soup = BeautifulSoup(raw_file,
-                                                 'html.parser',
-                                                 from_encoding=chardet.detect(raw_file)['encoding'].lower())
+                            charset=chardet.detect(raw_file)['encoding'].lower()
+                            raw_file=raw_file.decode(charset,"ignore").encode("utf-8")
+                            #soup = BeautifulSoup(raw_file,'html.parser',from_encoding=chardet.detect(raw_file)['encoding'].lower())
+                            soup = BeautifulSoup(raw_file,'html.parser')
                             title = soup.head.title.get_text().encode('utf-8')
                             self._website_title = title
                             if (not title) or ('阿里巴巴' in title):
