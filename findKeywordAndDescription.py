@@ -2,95 +2,151 @@
 # -*- coding: utf-8 -*-
 #encoding=utf-8
 #import sys
+
+from pyExcelerator import Workbook
+
 import urllib ,urllib2
-import re
+import re,time
 import chardet
 urllib2.socket.setdefaulttimeout(30)
 from bs4 import BeautifulSoup
-
 f=open("input.txt",'r')
 out=open('output.txt','a')
 htmlfile=""
 website=""
 charset=""
 
-def findtitle(web):
-    global htmlfile,charset,website
-    website=web
-    print "processing "+web,
-    #charset=""
-    try:
-        htmlfile=urllib2.urlopen(web).read()
-        title=re.findall(r'(?<=<title>).*?(?=</title>)',htmlfile,re.DOTALL)[0]
-        charset=chardet.detect(htmlfile)['encoding'].lower()
-    except BaseException:
-        title="此网站无标题或者标题错误"
-    if charset=='gbk' :
-        title = title.decode('gbk',"ignore").encode('utf-8')
-    if charset=='gb2312' :
-        title = title.decode('gb2312',"ignore").encode('utf-8')
-    if charset=='utf-8' or charset=='utf8':
-        #title = title.encode('utf-8')
-        pass
-    print title
-    out.write(website+"网址标题:\n"+title.strip()+"\n")
-    return title
 
-def findkeyword():
-    global htmlfile,website,charset
-    #website=web
-    print "processing keyword and description "+website,
-    if not htmlfile:
+class ExcelWriter(object):
+
+    #XLS_HEADERS = [u'公司ID编码', u'公司名', u'公司简介', u'公司主要产品', u'公司网站', u'公司网站标题']
+    XLS_HEADERS = [ u'公司名', u'公司网址', u'网站标题',u'网站搜索关键词或产品', u'网站描述']
+    COLS = len(XLS_HEADERS)
+
+    def __init__(self, output_name='findKeywordAndTitle.xls'):
+        #self.logger = logger
+        self.workbook = Workbook()
+        self.worksheet = self.workbook.add_sheet('CompanyInformation')
+        self.output_name = output_name
+        self.row = 1
+
+        for col in range(ExcelWriter.COLS):
+            self.worksheet.write(0, col, ExcelWriter.XLS_HEADERS[col])
+
+
+    def insert(self,obj):
+        items = obj
+        for col, item in enumerate(items):
+            self.worksheet.write(self.row, col, item)
+            #self.logger.info('成功在%s中写入%s', self.output_name, obj.corp_name)
+
+
+    def next_row(self):
+        self.row += 1
+        return self.row
+
+
+    def commit(self):
+        self.workbook.save(self.output_name)
+
+
+
+
+class finding():
+    def __init__(self):
+        self.htmlfile=""
+        self.website=""
+        self.charset=""
+        self.title=""
+        self.keyword=""
+        self.description=""
+
+    def findtitle(self,web):
+        #global htmlfile,charset,website
+        self.website=web
+        print "processing "+web,
+        #charset=""
         try:
-            htmlfile=urllib2.urlopen(website).read()
-        except:
+            self.htmlfile=urllib2.urlopen(self.website).read()
+            self.title=re.findall(r'(?<=<title>).*?(?=</title>)',self.htmlfile,re.DOTALL)[0]
+            self.charset=chardet.detect(self.htmlfile)['encoding'].lower()
+        except BaseException:
+            self.title="此网站无标题或者标题错误"
+        if self.charset=='gbk' :
+            self.title = self.title.decode('gbk',"ignore")
+        if self.charset=='gb2312' :
+            self.title = self.title.decode('gb2312',"ignore")
+        if self.charset=='utf-8' or self.charset=='utf8':
+            self.title = self.title.decode('utf-8',"ignore")
             pass
-            #title=re.findall(r'(?<=<title>).*?(?=</title>)',htmlfile,re.DOTALL)[0]
-    #print htmlfile
-    htmlfile=htmlfile.decode(charset,"ignore").encode("utf-8")
-    #print htmlfile
-    #print charset
-    soup=BeautifulSoup(htmlfile)
+        print self.title.encode('utf-8')
+        out.write(self.website+"网址标题:\n"+self.title.strip().encode('utf-8')+"\n")
+        return self.title
 
-    keyword=soup.find("meta",{"name":"Keywords"})
-    if not keyword:
-        keyword=soup.find("meta",{"name":"keywords"})
+    def findkeyword(self):
+        #global htmlfile,website,charset
+        #website=web
+        print "processing keyword and description "+self.website,
+        if not self.htmlfile:
+            try:
+                self.htmlfile=urllib2.urlopen(self.website).read()
+            except:
+                pass
+                #title=re.findall(r'(?<=<title>).*?(?=</title>)',htmlfile,re.DOTALL)[0]
+        #print htmlfile
+        #print
+        self.htmlfile=self.htmlfile.decode(self.charset,"ignore").encode("utf-8")
+        #print htmlfile
+        #print charset
+        soup=BeautifulSoup(self.htmlfile,"lxml")
 
-    if keyword:
-        keyword= keyword["content"]
-    else:
-        keyword=u"该网站没有关键词"
-    print keyword
+        self.keyword=soup.find("meta",{"name":"Keywords"})
+        if not self.keyword:
+            self.keyword=soup.find("meta",{"name":"keywords"})
 
-    description=soup.find("meta",{"name":"Description"})
-    if not description:
-        description=soup.find("meta",{"name":"description"})
+        if self.keyword:
+            self.keyword= self.keyword["content"]
+        else:
+            self.keyword=u"该网站没有关键词"
+        print self.keyword
 
-    if description:
-        description=description["content"]
-    else:
-        description=u"该网站没有网站描述"
-    print description
+        self.description=soup.find("meta",{"name":"Description"})
+        if not self.description:
+            self.description=soup.find("meta",{"name":"description"})
 
-
-    out.write("关键词\n"+keyword.encode("utf-8")+"\n")
-    out.write("网站描述\n"+description.encode("utf-8")+"\n")
-    out.write("####################################\n")
-
+        if self.description:
+            self.description=self.description["content"]
+        else:
+            self.description=u"该网站没有网站描述"
+        print self.description
 
 
+        out.write("关键词\n"+self.keyword.encode("utf-8")+"\n")
+        out.write("网站描述\n"+self.description.encode("utf-8")+"\n")
+        out.write("####################################\n")
+
+    def get_as_tuple(self):
+        return (
+            "",self.website,self.title,self.description,self.keyword
+            )
 
 def startinput():
-    global website
+    #global website
+    soqi=finding()
+    excel=ExcelWriter("findKeywordAndDescription%s.xls" % time.strftime("%y-%m-%d-%H-%M-%S",time.localtime(time.time())))
+
     while True:
         web=f.readline()
         if len(web)==0:
             break
-        website=web
-        title=findtitle(web)
-        findkeyword()
+        #website=web
+        soqi.findtitle(web)
+        soqi.findkeyword()
+        excel.insert(soqi.get_as_tuple())
+        excel.next_row()
+        excel.commit()
         print "success"
-        htmlfile=""
+        #htmlfile=""
         #out.write(title.strip()+'\n')
         out.flush()
     f.close()
@@ -101,3 +157,7 @@ if __name__ == "__main__":
     startinput()
     #findtitle()
     #findkeyword()
+
+
+
+
