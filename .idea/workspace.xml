@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7ca28858-e9a5-4619-a81a-c9693fe37f51" name="Default" comment="">
+    <list default="true" id="7ca28858-e9a5-4619-a81a-c9693fe37f51" name="Default" comment="v2.8&#10;add a file which can find website description and keywords&#10;and output excel">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/findKeywordAndDescription.py" afterPath="$PROJECT_DIR$/findKeywordAndDescription.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reaper/corp_obj.py" afterPath="$PROJECT_DIR$/reaper/corp_obj.py" />
+    </list>
+    <list id="a96b8c10-e854-4c5d-b136-1d54ebec62b4" name="Rejected commit: Default" comment="添加了插入excel的功能">
       <change type="DELETED" beforePath="D:\Dropbox\code and project\python\SoqiSpider\~$璇存槑鏂囨。.docx" afterPath="" />
       <change type="DELETED" beforePath="D:\Dropbox\code and project\python\SoqiSpider\璇存槑鏂囨。.docx" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/insert/excel.py" afterPath="$PROJECT_DIR$/insert/excel.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reaper/corp_obj.py" afterPath="$PROJECT_DIR$/reaper/corp_obj.py" />
     </list>
-    <list id="a96b8c10-e854-4c5d-b136-1d54ebec62b4" name="Rejected commit: Default" comment="添加了插入excel的功能" />
     <ignored path="SoqiSpider.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="reaper/134236606986.txt" />
@@ -58,18 +59,45 @@
       <file leaf-file-name="corp_obj.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/reaper/corp_obj.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="192" column="0" selection-start="7057" selection-end="7057" vertical-scroll-proportion="0.025815217">
+            <state line="198" column="22" selection-start="7339" selection-end="7339" vertical-scroll-proportion="0.6453608">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="findKeywordAndDescription.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/findKeywordAndDescription.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="182" column="18" selection-start="5609" selection-end="5609" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#19#33#0" expanded="true" />
+                <element signature="e#75#109#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="element.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bs4/element.py">
+      <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/insert/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="729" column="0" selection-start="26610" selection-end="26610" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="input.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/input.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="0" selection-start="80" selection-end="80" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="findtitle.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/findtitle.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="5" selection-start="816" selection-end="816" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -105,7 +133,7 @@
       <file leaf-file-name="excel.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/insert/excel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="21" selection-start="289" selection-end="289" vertical-scroll-proportion="0.0">
+            <state line="17" column="35" selection-start="0" selection-end="1032" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -137,8 +165,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/corp_obj.py" />
-        <option value="$PROJECT_DIR$/.idea/dictionaries/Administrator.xml" />
         <option value="$PROJECT_DIR$/Create.sql" />
         <option value="$PROJECT_DIR$/reaper/mysql.py" />
         <option value="$PROJECT_DIR$/reaper/excel.py" />
@@ -152,6 +178,8 @@
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/findtitle.py" />
         <option value="$PROJECT_DIR$/insert/excel.py" />
+        <option value="$PROJECT_DIR$/insert/__init__.py" />
+        <option value="$PROJECT_DIR$/findKeywordAndDescription.py" />
         <option value="$PROJECT_DIR$/reaper/corp_obj.py" />
       </list>
     </option>
@@ -188,16 +216,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -230,18 +248,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
           <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SoqiSpider" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SoqiSpider" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="insert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -265,32 +279,15 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Dropbox\code and project\python\SoqiSpider" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\workspace\SoqiSpider\reaper" />
       <recent name="D:\workspace\SoqiSpider" />
     </key>
   </component>
   <component name="RunManager" selected="Python.main">
-    <configuration default="false" name="grab" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="D:/Python27/python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/reaper" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <module name="SoqiSpider" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/reaper/grab.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="MULTIPROCESS" value="false" />
-      <RunnerSettings RunnerId="PyDebugRunner" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PyDebugRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
     <configuration default="false" name="mysql" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -365,6 +362,24 @@
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
+    <configuration default="false" name="findKeywordAndDescription" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <module name="SoqiSpider" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/findKeywordAndDescription.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="MULTIPROCESS" value="false" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -426,11 +441,11 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.grab" />
-      <item index="1" class="java.lang.String" itemvalue="Python.mysql" />
-      <item index="2" class="java.lang.String" itemvalue="Python.corp_obj" />
-      <item index="3" class="java.lang.String" itemvalue="Python.main" />
-      <item index="4" class="java.lang.String" itemvalue="Python.findtitle" />
+      <item index="0" class="java.lang.String" itemvalue="Python.mysql" />
+      <item index="1" class="java.lang.String" itemvalue="Python.corp_obj" />
+      <item index="2" class="java.lang.String" itemvalue="Python.main" />
+      <item index="3" class="java.lang.String" itemvalue="Python.findtitle" />
+      <item index="4" class="java.lang.String" itemvalue="Python.findKeywordAndDescription" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -512,7 +527,19 @@
       <created>1343573088601</created>
       <updated>1343573088601</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="v2.6&#10;change the output of excel">
+      <created>1345517440059</created>
+      <updated>1345517440059</updated>
+    </task>
+    <task id="LOCAL-00015" summary="v2.7&#10;fix the website title charset error &#10;&#10;add a file which can find website description and keywords&#10;">
+      <created>1345555378941</created>
+      <updated>1345555378941</updated>
+    </task>
+    <task id="LOCAL-00016" summary="v2.8&#10;add a file which can find website description and keywords&#10;and output excel">
+      <created>1345645636798</created>
+      <updated>1345645636798</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -536,18 +563,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="958" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1296" height="958" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32976973" sideWeight="0.67994857" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32564104" sideWeight="0.49095395" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32788944" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27552673" sideWeight="0.69095474" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3253769" sideWeight="0.49095395" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32788944" sideWeight="0.49675852" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2893031" sideWeight="0.21859297" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30875203" sideWeight="0.68467337" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3982412" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3115578" sideWeight="0.11345219" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30904523" sideWeight="0.88087523" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31532663" sideWeight="0.1191248" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31532663" sideWeight="0.8752026" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32663316" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -597,7 +624,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix charset and delete alibaba websites" />
+    <option name="LAST_COMMIT_MESSAGE" value="v2.8&#10;add a file which can find website description and keywords&#10;and output excel" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -624,6 +651,9 @@
     <MESSAGE value="solve some charset problem" />
     <MESSAGE value="add logger" />
     <MESSAGE value="fix charset and delete alibaba websites" />
+    <MESSAGE value="v2.6&#10;change the output of excel" />
+    <MESSAGE value="v2.7&#10;fix the website title charset error &#10;&#10;add a file which can find website description and keywords&#10;" />
+    <MESSAGE value="v2.8&#10;add a file which can find website description and keywords&#10;and output excel" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -648,31 +678,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bs4/builder/_htmlparser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="11" selection-start="767" selection-end="767" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bs4/tests/test_soup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="43" selection-start="1188" selection-end="1188" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bs4/dammit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="17" selection-start="697" selection-end="697" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reaper/id_gen.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="59" selection-start="1511" selection-end="1511" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reaper/constants.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="172" column="27" selection-start="11199" selection-end="11199" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://D:/Python27/Lib/threading.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="514" column="13" selection-start="16361" selection-end="16361" vertical-scroll-proportion="0.0" />
@@ -690,14 +695,27 @@
     </entry>
     <entry file="file://D:/Python27/Lib/re.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="237" column="30" selection-start="10279" selection-end="10279" vertical-scroll-proportion="0.6412037">
-          <folding />
-        </state>
+        <state line="237" column="30" selection-start="10279" selection-end="10279" vertical-scroll-proportion="0.6412037" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bs4/element.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="729" column="0" selection-start="26610" selection-end="26610" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/insert/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="80" selection-end="80" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/findtitle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="5" selection-start="816" selection-end="816" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gui/thread_watcher.py">
@@ -717,7 +735,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/insert/excel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="21" selection-start="289" selection-end="289" vertical-scroll-proportion="0.0" />
+        <state line="17" column="35" selection-start="0" selection-end="1032" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/insert/excel_bak.py">
@@ -725,12 +743,19 @@
         <state line="27" column="0" selection-start="821" selection-end="1297" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/findKeywordAndDescription.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="182" column="18" selection-start="5609" selection-end="5609" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#75#109#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/reaper/corp_obj.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="192" column="0" selection-start="7057" selection-end="7057" vertical-scroll-proportion="0.025815217">
-          <folding>
-            <element signature="e#19#33#0" expanded="true" />
-          </folding>
+        <state line="198" column="22" selection-start="7339" selection-end="7339" vertical-scroll-proportion="0.6453608">
+          <folding />
         </state>
       </provider>
     </entry>

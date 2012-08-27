@@ -3,7 +3,6 @@
 *.zip
 *.xls
 *.exe
-*.rar
 *.tar.gz
 .idea/*
 build/*
