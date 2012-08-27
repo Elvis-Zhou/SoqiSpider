@@ -1,6 +1,9 @@
 *.pyc
 *.txt
+
 *.zip
+*.rar
+
 *.xls
 *.exe
 *.tar.gz

@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ca28858-e9a5-4619-a81a-c9693fe37f51" name="Default" comment="v2.8&#10;add a file which can find website description and keywords&#10;and output excel">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/findKeywordAndDescription.py" afterPath="$PROJECT_DIR$/findKeywordAndDescription.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reaper/corp_obj.py" afterPath="$PROJECT_DIR$/reaper/corp_obj.py" />
-    </list>
-    <list id="a96b8c10-e854-4c5d-b136-1d54ebec62b4" name="Rejected commit: Default" comment="添加了插入excel的功能">
-      <change type="DELETED" beforePath="D:\Dropbox\code and project\python\SoqiSpider\~$璇存槑鏂囨。.docx" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dropbox\code and project\python\SoqiSpider\璇存槑鏂囨。.docx" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
+    <list id="a96b8c10-e854-4c5d-b136-1d54ebec62b4" name="Rejected commit: Default" comment="添加了插入excel的功能" />
     <ignored path="SoqiSpider.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="reaper/134236606986.txt" />
@@ -56,10 +52,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="corp_obj.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="corp_obj.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/reaper/corp_obj.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="198" column="22" selection-start="7339" selection-end="7339" vertical-scroll-proportion="0.6453608">
+            <state line="194" column="17" selection-start="7294" selection-end="7294" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -103,10 +99,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="thread_watcher.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="thread_watcher.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gui/thread_watcher.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="21" selection-start="337" selection-end="337" vertical-scroll-proportion="0.0">
+            <state line="23" column="0" selection-start="526" selection-end="526" vertical-scroll-proportion="0.33333334">
               <folding />
             </state>
           </provider>
@@ -564,7 +560,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="958" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32976973" sideWeight="0.67994857" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3253769" sideWeight="0.49095395" order="7" side_tool="false" content_ui="tabs" />
@@ -574,7 +570,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3982412" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31532663" sideWeight="0.1191248" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31532663" sideWeight="0.8752026" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31532663" sideWeight="0.8752026" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32663316" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -718,11 +714,6 @@
         <state line="28" column="5" selection-start="816" selection-end="816" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gui/thread_watcher.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="21" selection-start="337" selection-end="337" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/reaper/grab.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="79" column="0" selection-start="1941" selection-end="1941" vertical-scroll-proportion="0.0" />
@@ -754,7 +745,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/reaper/corp_obj.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="198" column="22" selection-start="7339" selection-end="7339" vertical-scroll-proportion="0.6453608">
+        <state line="194" column="17" selection-start="7294" selection-end="7294" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gui/thread_watcher.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="0" selection-start="526" selection-end="526" vertical-scroll-proportion="0.33333334">
           <folding />
         </state>
       </provider>
